@@ -1,11 +1,25 @@
 {
-  "cSpell.words": ["Vitesse"],
-  "prettier.enable": false,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-  },
-  "files.associations": {
-    "*.css": "postcss",
-  },
+  "git.enableCommitSigning": true,
+  "git.postCommitCommand": "sync",
+  "git.followTagsWhenSync": true,
+  "git.autoStash": true,
+  "git.enableSmartCommit": true,
+  "git.allowForcePush": true,
+  "git.useForcePushWithLease": true,
+  "git.terminalAuthentication": true,
+  "git.checkoutType": [
+    "local",
+    "remote",
+    "tags"
+  ],
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.sortContributorsBy": "count:desc",
+  "gitlens.sortBranchesBy": "date:desc",
+  "gitlens.advanced.caching.enabled": true,
+  "gitlens.advanced.abbreviatedShaLength": 7,
+  "gitlens.advanced.repositorySearchDepth": 1,
+  "gitlens.blame.heatmap.enabled": true,
+  "gitlens.blame.heatmap.location": "left",
+  "gitlens.views.repositories.showUpstreamStatus": true
 }

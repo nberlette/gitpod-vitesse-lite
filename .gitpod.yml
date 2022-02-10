@@ -2,9 +2,7 @@ image: nberlette/gitpod-enhanced:latest
 
 tasks:
   - before: pnpm install
-    init: >-
-      [ -z "$GITPOD_ENHANCED"] &&
-        curl -sSL "https://gist.github.com/nberlette/83029ef6881a0e74695bdbc7715a3365/raw/install.sh" | bash;
+    init: pnpm install --global vercel
     command: pnpm run dev
 
 ports:
