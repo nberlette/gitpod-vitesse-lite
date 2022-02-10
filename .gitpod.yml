@@ -1,0 +1,72 @@
+image: nberlette/gitpod-enhanced:latest
+
+tasks:
+  - before: pnpm install
+    init: >-
+      [ -z "$GITPOD_ENHANCED"] &&
+        curl -sSL "https://gist.github.com/nberlette/83029ef6881a0e74695bdbc7715a3365/raw/install.sh" | bash;
+    command: pnpm run dev
+
+ports:
+  - port: 3000-5000
+    onOpen: notify
+    visibility: public
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addBadge: true
+    addLabel: true
+
+gitConfig:
+  commit.gpgsign: "true"
+  tag.gpgsign: "true"
+  init.defaultBranch: "main"
+  alias.amend: "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
+  alias.log-g: "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+  alias.log-v: "!git log -n 1 -p --format=fuller"
+  color.ui: auto
+  color.branch.current: "yellow reverse"
+  color.branch.local: "yellow"
+  color.branch.remote: "green"
+  color.diff.meta: "yellow bold"
+  color.diff.frag: "magenta bold"
+  color.diff.old: "red bold"
+  color.diff.new: "green bold"
+  color.status.added: "yellow"
+  color.status.changed: "green"
+  color.status.untracked: "red"
+  bash.showdirtystate: "1"
+  bash.showstashstate: "1"
+  bash.showuntrackedfiles: "1"
+  bash.showupstream: ""
+  bash.showcolorhints: "true"
+  init.defaultbranch: main
+  url.https://github.com.insteadOf: "github:"
+  url.https://github.com/.insteadOf: "gh:"
+  url.https://gist.github.com/.insteadOf: "gist:"
+  url.https://gitlab.com.insteadOf: "gitlab:"
+  url.https://gitlab.com/.insteadOf: "gl:"
+
+vscode:
+  extensions:
+    - johnsoncodehk.volar
+    - antfu.iconify
+    - antfu.vite
+    - antfu.browse-lite
+    - antfu.unocss
+    - jock.svg
+    - editorconfig.editorconfig
+    - dbaeumer.vscode-eslint
+    - eamodio.gitlens
+    - yzhang.markdown-all-in-one
+    - jacano.vscode-pnpm
+    - gamunu.vscode-yarn
+    - eg2.vscode-npm-script
+    - christian-kohler.npm-intellisense
+    - christian-kohler.path-intellisense
+    - mrmlnc.vscode-scss
