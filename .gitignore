@@ -1,4 +1,9 @@
 .DS_Store
+Thumbs.db
+.vercel
+.cache
+*.log
+*.pem
 .vite-ssg-dist
 .vite-ssg-temp
 *.local
@@ -7,3 +12,12 @@ dist-ssr
 node_modules
 .idea/
 *.log
+
+# secrets
+.env
+.env.*
+.env.*.local
+
+# dotenv sync: see https://ui.dotenv.org for docs and specification
+.env.me
+!.env.project

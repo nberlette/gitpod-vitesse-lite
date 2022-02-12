@@ -2,7 +2,6 @@ image: nberlette/gitpod-enhanced:latest
 
 tasks:
   - before: pnpm install
-    init: pnpm install --global vercel
     command: pnpm run dev
 
 ports:
@@ -52,19 +51,20 @@ gitConfig:
 
 vscode:
   extensions:
+    - octref.vetur
     - johnsoncodehk.volar
+    - sdras.vue-vscode-snippets
+    - editorconfig.editorconfig
+    - eamodio.gitlens
+    - jock.svg
     - antfu.iconify
     - antfu.vite
-    - antfu.browse-lite
     - antfu.unocss
-    - jock.svg
-    - editorconfig.editorconfig
-    - dbaeumer.vscode-eslint
-    - eamodio.gitlens
+    - mrmlnc.vscode-scss
     - yzhang.markdown-all-in-one
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
     - jacano.vscode-pnpm
     - gamunu.vscode-yarn
-    - eg2.vscode-npm-script
     - christian-kohler.npm-intellisense
     - christian-kohler.path-intellisense
-    - mrmlnc.vscode-scss

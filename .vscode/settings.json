@@ -21,5 +21,29 @@
   "gitlens.advanced.repositorySearchDepth": 1,
   "gitlens.blame.heatmap.enabled": true,
   "gitlens.blame.heatmap.location": "left",
-  "gitlens.views.repositories.showUpstreamStatus": true
+  "gitlens.views.repositories.showUpstreamStatus": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e7f5ae",
+    "activityBar.activeBorder": "#19a4c7",
+    "activityBar.background": "#e7f5ae",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#19a4c7",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "editorGroup.border": "#e7f5ae",
+    "panel.border": "#e7f5ae",
+    "sash.hoverBorder": "#e7f5ae",
+    "sideBar.border": "#e7f5ae",
+    "statusBar.background": "#daf080",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#cdeb52",
+    "statusBarItem.remoteBackground": "#daf080",
+    "statusBarItem.remoteForeground": "#15202b",
+    "tab.activeBorder": "#e7f5ae",
+    "titleBar.activeBackground": "#daf080",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#daf08099",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.remoteColor": "#daf080"
 }
