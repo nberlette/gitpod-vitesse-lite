@@ -12,8 +12,8 @@ const go = () => {
   <div>
     <div i-carbon-campsite text-4xl inline-block />
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
+      <a rel="noreferrer" href="https://github.com/nberlette/gitpod-vitesse-lite" target="_blank">
+        Vitesse Lite + <img src="https://icns.ml/gitpod.svg" alt="Gitpod" width="20" height="20" class="inline" />
       </a>
     </p>
     <p>
