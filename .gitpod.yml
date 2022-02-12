@@ -1,7 +1,11 @@
 image: nberlette/gitpod-enhanced:latest
 
 tasks:
-  - before: pnpm install
+  - init: |
+      pnpm add -g @dotenv/cli
+      alias nv="dotenv-cli"
+      [ -e .env.me ] && [ -e .env.project ] && nv pull
+    before: pnpm install
     command: pnpm run dev
 
 ports:
