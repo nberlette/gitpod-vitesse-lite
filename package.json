@@ -1,5 +1,20 @@
 {
+  "name": "gitpod-vitesse-lite",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Berlette",
+    "email": "nick@berlette.com",
+    "url": "https://berlette.com"
+  },
   "private": true,
+  "homepage": "https://github.com/nberlette/gitpod-vitesse-lite",
+  "readme": "https://github.com/nberlette/gitpod-vitesse-lite",
+  "repository": "nberlette/gitpod-vitesse-lite",
+  "bugs": {
+    "url": "https://github.com/nberlette/gitpod-vitesse-lite/issues",
+    "email": "bugs@berlette.com"
+  },
   "scripts": {
     "dev": "vite --port 3333 --open",
     "build": "vite build",
