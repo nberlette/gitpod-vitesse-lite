@@ -15,9 +15,17 @@ node_modules
 
 # secrets
 .env
+.env*
 .env.*
 .env.*.local
 
 # dotenv sync: see https://ui.dotenv.org for docs and specification
 .env.me
+# we want this to be committed!
 !.env.project
+
+# and will allow example/sample/template/demo files, of course
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+!.env.*.demo
