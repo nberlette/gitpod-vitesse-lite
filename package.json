@@ -16,11 +16,42 @@
     "email": "bugs@berlette.com"
   },
   "scripts": {
-    "dev": "vite --port 3333 --open",
+    "env": "dotenv-cli pull",
+    "env:push": "dotenv-cli push",
+    "dev": "vite --port ${PORT:-3333} --open",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext=.ts,.vue",
+    "eslint": "eslint --ext=.ts,.vue .",
+    "eslint:fix": "eslint --ext=.ts,.vue --fix .",
+    "prettier": "prettier --ignore-path .eslintignore --check .",
+    "prettier:fix": "prettier --ignore-path .eslintignore --write .",
+    "lint": "run-s eslint prettier",
+    "lint:fix": "run-s eslint:fix prettier:fix",
+    "format": "run-s lint:fix",
     "test": "vitest"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@antfu",
+      "eslint-config-prettier"
+    ],
+    "plugins": ["eslint-config-prettier"],
+    "rules": {
+      "@typescript-eslint/indent": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "indent": "off",
+      "indent-legacy": "off",
+      "comma-dangle": "off"
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "vueIndentScriptAndStyle": true
   },
   "dependencies": {
     "@vueuse/core": "^7.6.1",
@@ -29,14 +60,19 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.1",
+    "@antfu/ni": "^0.12.0",
+    "@dotenv/cli": "^2.0.0",
     "@iconify-json/carbon": "^1.0.15",
+    "@iconify-json/simple-icons": "^1.0.20",
     "@types/node": "^17.0.17",
     "@unocss/reset": "^0.24.3",
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/test-utils": "^2.0.0-rc.18",
     "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
     "jsdom": "^19.0.0",
     "pnpm": "^6.30.1",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.5",
     "unocss": "^0.24.3",
     "unplugin-auto-import": "^0.5.11",
