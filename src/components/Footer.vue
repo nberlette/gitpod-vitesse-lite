@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { isDark, toggleDark } from '~/composables'
+  import { isDark, toggleDark } from '~/composables'
 </script>
 
 <template>
-  <nav text-xl mt-6 inline-flex gap-2>
+  <nav text-xl mt-6 inline-flex gap-4>
     <button class="icon-btn !outline-none" @click="toggleDark()">
       <div v-if="isDark" i-carbon-moon />
       <div v-else i-carbon-sun />
@@ -12,10 +12,18 @@ import { isDark, toggleDark } from '~/composables'
     <a
       class="icon-btn"
       i-carbon-logo-github
-      rel="noreferrer"
-      href="https://github.com/antfu/vitesse-lite"
+      href="https://github.com/nberlette/gitpod-vitesse-lite"
+      rel="noopener noreferrer"
       target="_blank"
-      title="GitHub"
+      title="View on GitHub"
+    />
+    <a
+      class="icon-btn scale-[0.8]"
+      i-simple-icons-gitpod
+      href="https://gitpod.io/#https://github.com/nberlette/gitpod-vitesse-lite"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Open in Gitpod!"
     />
   </nav>
 </template>

@@ -1,19 +1,29 @@
 <script setup lang="ts">
-const name = ref('')
+  const name = ref('')
+  const router = useRouter()
 
-const router = useRouter()
-const go = () => {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
+  const go = () => {
+    if (name.value)
+      router.push(`/hi/${encodeURIComponent(name.value)}`)
+  }
 </script>
 
 <template>
   <div>
-    <div i-carbon-campsite text-4xl inline-block />
     <p>
-      <a rel="noreferrer" href="https://github.com/nberlette/gitpod-vitesse-lite" target="_blank">
-        Vitesse Lite + <img src="https://icns.ml/gitpod.svg" alt="Gitpod" width="20" height="20" class="inline" />
+      <a
+        rel="noreferrer"
+        href="https://github.com/nberlette/gitpod-vitesse-lite"
+        target="_blank"
+        inline-flex gap-4 mb-4 pb-4 px-20
+        duration-700 ease-in-out transition-colors
+        hover="text-[#ffae33]"
+        border="b-1 gray-200 dark:gray-600"
+        outline="none active:none hover:none"
+      >
+        <i i-carbon-campsite text-4xl flex />
+        <span class="mt-2.5 op-60">+</span>
+        <i i-simple-gitpod text-4xl flex class="scale-[0.8]" />
       </a>
     </p>
     <p>
