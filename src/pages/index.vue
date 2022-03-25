@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  const name = ref('')
-  const router = useRouter()
+const name = $ref('')
 
-  const go = () => {
-    if (name.value)
-      router.push(`/hi/${encodeURIComponent(name.value)}`)
-  }
+const router = useRouter()
+const go = () => {
+  if (name)
+    router.push(`/hi/${encodeURIComponent(name)}`)
+}
 </script>
 
 <template>
@@ -20,7 +20,7 @@
         hover="text-[#ffae33]"
         border="b-1 gray-200 dark:gray-600"
         outline="none active:none hover:none"
-      >
+     >
         <i i-carbon-campsite text-4xl flex />
         <span class="mt-2.5 op-60">+</span>
         <i i-simple-gitpod text-4xl flex class="scale-[0.8]" />
